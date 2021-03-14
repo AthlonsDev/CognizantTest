@@ -47,6 +47,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
             if access {
                 let tvc = TableViewController()
                 self.navigationController?.pushViewController(tvc, animated: true)
+            } else {
+//                TODO: Show error message stating the error (like password must have at least 6 characters)
+                
             }
         }     
     }

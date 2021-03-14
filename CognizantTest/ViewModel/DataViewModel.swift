@@ -14,7 +14,7 @@ class DataViewModel {
     
     let name: String
     let size: String
-    let satellites: String
+    let moons: String
     let image: String
     let category: String
     let year: String
@@ -24,7 +24,7 @@ class DataViewModel {
     init(data: Planets) {
         self.name = data.Name
         self.size = data.Size
-        self.satellites = data.Satellites
+        self.moons = data.Moons
         self.image = data.Image
         self.category = data.Category
         self.year = data.Year

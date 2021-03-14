@@ -24,16 +24,15 @@ class ImageProcessor {
                             print(error?.localizedDescription as Any)
     
                           }
+                        
                           DispatchQueue.main.async {
-                              if data != nil {
-                                  if let proImage = UIImage(data: data!){
-    
+                              if let img = data {
+                                
+                                 let proImage = UIImage(data: img)
                                     completion(proImage)
     
-                                  }
-                              } else {
-    
-                              }
+                                }
+                              
                           }
     
                 }).resume()

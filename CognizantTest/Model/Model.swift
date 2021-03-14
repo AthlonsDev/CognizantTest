@@ -13,7 +13,7 @@ struct Planets: Decodable {
     
     var Name = String()
     var Size = String()
-    var Satellites = String()
+    var Moons = String()
     var Image = String()
     var Category = String()
     var Year = String()

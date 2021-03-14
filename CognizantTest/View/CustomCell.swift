@@ -15,7 +15,7 @@ class CustomCell: UITableViewCell {
           didSet{
             nameLabel.text = dvm.name
             sizeLabel.text = "Size: \(dvm.size)"
-            satLabel.text = "Moons: \(dvm.satellites)"
+            satLabel.text = "Moons: \(dvm.moons)"
             catLabel.text = "Type: \(dvm.category)"
             yearLabel.text = "Year: \(dvm.year)"
             dvm.processImages(imageString: dvm.image) { (img) in
