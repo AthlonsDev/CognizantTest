@@ -13,6 +13,7 @@ class CognizantTestTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
 
     override func tearDown() {
@@ -24,11 +25,22 @@ class CognizantTestTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDataViewModel() {
+         let data = Planets(Name: "Earth", Size: "40,075km", Satellites: "Moon", Image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/220px-The_Earth_seen_from_Apollo_17.jpg", Category : "Planet", Year: "365 Days")
+         let dataViewModel = DataViewModel(data: data)
+         
+         // what is it that we want to test?
+        XCTAssertEqual(data.Name, dataViewModel.name)
+        XCTAssertEqual(data.Size, dataViewModel.size)
+     }
+    
+    func testUserViewModel() {
+         let user = User(username: "Username", password: "Password")
+         let userViewModel = UserViewModel(user: user)
+         
+         // what is it that we want to test?
+        XCTAssertEqual(user.username, userViewModel.username)
+        XCTAssertEqual(user.password, userViewModel.password)
     }
 
 }
